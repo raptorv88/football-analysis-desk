@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Football Analysis Desk</title>
+<link rel="stylesheet" href="styles.css?v=20">
+</head>
+<body>
+  <header>
+    <section class="match-ticker-band" aria-label="Upcoming fixtures across competitions">
+      <div class="match-ticker-inner">
+        <span class="ticker-label">FOOTBALL / FIXTURES</span>
+        <button class="ticker-arrow" id="ticker-prev" type="button" aria-label="Scroll to earlier fixtures">&#8249;</button>
+        <div class="ticker-track" id="match-ticker" aria-live="polite"><p class="ticker-empty">Loading fixtures...</p></div>
+        <button class="ticker-arrow" id="ticker-next" type="button" aria-label="Scroll to later fixtures">&#8250;</button>
+      </div>
+    </section>
+    <div class="brand-row"><h1><span class="brand-symbol">FA</span><span>Football <em>Analysis Desk</em></span></h1><span class="live-status"><i></i> Live data workspace</span></div>
+    <nav aria-label="Dashboard sections">
+      <button class="tab-btn active" data-tab="home">Home</button>
+      <button class="tab-btn" data-tab="table">League Table</button>
+      <button class="tab-btn" data-tab="team">Team Stats</button>
+      <button class="tab-btn" data-tab="predict">Predictions</button>
+      <button class="tab-btn" data-tab="competitions">Competition Centre</button>
+    </nav>
+  </header>
+
+  <div class="dashboard-shell">
+    <aside class="side-rail left-rail">
+      <div class="rail-heading"><span>01</span><h2>Around the league</h2></div>
+      <div id="side-news"><p class="muted">Loading headlines...</p></div>
+    </aside>
+
+    <main>
+    <section id="tab-home" class="tab active">
+      <div class="home-intro">
+        <div>
+          <p class="eyebrow">GLOBAL FOOTBALL / MATCH INTELLIGENCE</p>
+          <h2>One desk. Every competition.</h2>
+          <p class="intro-copy">Fixtures, standings and match forecasts across six competitions.</p>
+        </div>
+        <div class="season-stamp"><span>Competitions</span><strong id="home-season">—</strong></div>
+      </div>
+      <div class="home-grid">
+        <section class="home-block live-block">
+          <div class="section-heading"><h3>Premier League live</h3><span class="status-pill live-pill">Updates from fixture feed</span></div>
+          <div id="live-output"><p class="muted">Checking live fixtures...</p></div>
+        </section>
+        <section class="home-block fixtures-block">
+          <div class="section-heading"><h3>Next across competitions</h3><button class="text-button" data-go="competitions">Open match centre</button></div>
+          <div id="home-upcoming"></div>
+        </section>
+        <section class="home-block league-pulse-block">
+          <div class="section-heading"><h3>League pulse</h3><span class="status-pill">Live</span></div>
+          <p class="pulse-copy">Browse the table, compare club profiles, or jump into a matchup.</p>
+          <div class="pulse-links"><button class="outline-button" data-go="table">League table</button><button class="outline-button" data-go="team">Team profiles</button><button class="outline-button" data-go="predict">Matchups</button></div>
+        </section>
+      </div>
+      <section class="home-block results-block">
+        <div class="section-heading"><h3>Recent results &amp; predictions</h3><span class="status-pill">Last 7 days</span></div>
+        <div id="results-output"><p class="muted">Loading recent results...</p></div>
+      </section>
+      <section class="home-block news-block">
+        <div class="section-heading"><h3>Latest around the league</h3><span>Updated from public feeds</span></div>
+        <div id="news-output" class="news-grid"></div>
+      </section>
+    </section>
+
+    <section id="tab-table" class="tab">
+      <section class="live-table-strip">
+        <div class="section-heading"><h3>Live scores</h3><span id="table-live-status">Checking feed...</span></div>
+        <p class="live-table-note muted">Checking standings freshness...</p>
+        <div id="table-live-output"><p class="muted">Checking live matches...</p></div>
+      </section>
+      <label>Season:
+        <select id="season-select"></select>
+      </label>
+      <table id="table-output">
+        <thead>
+          <tr>
+            <th>#</th><th>Team</th><th>P</th><th>W</th><th>D</th><th>L</th>
+            <th>GF</th><th>GA</th><th>GD</th><th>Pts</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <section id="tab-team" class="tab">
+      <label>Team:
+        <select id="team-select"></select>
+      </label>
+      <label>Season:
+        <select id="team-season-select">
+          <option value="">All seasons</option>
+        </select>
+      </label>
+      <div id="team-output" class="card"></div>
+      <section class="team-player-section">
+        <div class="section-heading"><h3>Team scoring leaders</h3><span>Premier League season totals</span></div>
+        <div id="team-player-output"><p class="muted">Loading player summaries...</p></div>
+      </section>
+    </section>
+
+    <section id="tab-predict" class="tab">
+      <h2>Upcoming Fixtures</h2>
+      <p class="pre-match-note">Pre-match forecasts only. Probabilities do not update from live match events or in-game statistics.</p>
+      <div id="upcoming-output"></div>
+
+      <h2>Try a Matchup</h2>
+      <label>Home:
+        <select id="predict-home"></select>
+      </label>
+      <label>Away:
+        <select id="predict-away"></select>
+      </label>
+      <button id="predict-btn">Predict</button>
+      <div id="predict-output" class="card"></div>
+      <p class="pre-match-note">This is a testing model for personal use, not live betting advice.</p>
+      <div id="matchup-output"></div>
+    </section>
+
+    <section id="tab-competitions" class="tab">
+      <div class="competition-heading">
+        <p class="eyebrow">ALL COMPETITIONS / MATCH CENTRE</p>
+        <h2>Competition Centre</h2>
+        <p class="intro-copy">Compare standings, schedules, scoring leaders and forecasts across six competitions.</p>
+      </div>
+      <div class="competition-controls">
+        <label>Competition:
+          <select id="competition-select"></select>
+        </label>
+        <label>Season:
+          <select id="competition-season-select"></select>
+        </label>
+        <span id="competition-data-status" role="status"></span>
+      </div>
+      <div class="competition-layout">
+        <section class="competition-panel standings-panel">
+          <div class="section-heading"><h3>Standings</h3><span id="competition-table-label"></span></div>
+          <div id="competition-table-wrap" class="competition-table-wrap">
+            <p class="muted">Choose a competition.</p>
+          </div>
+        </section>
+        <section class="competition-panel scorer-panel">
+          <div class="section-heading"><h3>Top scorers</h3><span>Season totals</span></div>
+          <label class="scorer-team-filter">Team:
+            <select id="competition-scorer-team"><option value="">All teams</option></select>
+          </label>
+          <p class="player-data-note">Goals, assists and appearances are season totals, not match-level model features.</p>
+          <div id="competition-scorers"><p class="muted">Player summaries will appear here.</p></div>
+        </section>
+        <section class="competition-panel comp-fixtures-panel">
+          <div class="section-heading"><h3>Upcoming fixtures</h3><span>Next matches</span></div>
+          <div id="competition-upcoming"><p class="muted">Fixtures will appear here.</p></div>
+        </section>
+        <section class="competition-panel comp-predictions-panel">
+          <div class="section-heading"><h3>Match predictions</h3><span>Competition-specific model</span></div>
+          <div id="competition-predictions"><p class="muted">Predictions will appear here.</p></div>
+        </section>
+      </div>
+    </section>
+    </main>
+
+    <aside class="side-rail right-rail">
+      <div class="rail-heading"><span>02</span><h2>Watch desk</h2></div>
+      <a class="watch-card" href="https://www.youtube.com/@PremierLeague" target="_blank" rel="noreferrer"><span class="watch-mark">PL</span><strong>Premier League</strong><small>Official video channel</small></a>
+      <a class="watch-card" href="https://www.youtube.com/@SkySportsFootball" target="_blank" rel="noreferrer"><span class="watch-mark">SKY</span><strong>Sky Sports Football</strong><small>Analysis and match coverage</small></a>
+      <div class="rail-note">External video links open in a new tab.</div>
+    </aside>
+  </div>
+
+  <footer>
+    <p>Probabilities are estimates, not certainties.</p>
+  </footer>
+
+  <script src="app.js?v=24"></script>
+</body>
+</html>

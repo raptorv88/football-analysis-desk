@@ -1,0 +1,96 @@
+player_id,player,team_id,team,goals,assists,penalties,played_matches
+7457,Donyell Malen,100,AS Roma,6,,,5
+252836,Gustavo Varela,5911,AC Monza,4,,1.0,4
+169216,Antonio Raimondo,470,Frosinone Calcio,4,,,5
+3220,Lautaro Martínez,108,FC Internazionale Milano,4,,,5
+2200,Davide Frattesi,110,SS Lazio,3,,,5
+211564,Giorgi Kvernadze,470,Frosinone Calcio,3,1.0,,5
+183018,Vasilije Adzic,471,US Sassuolo Calcio,3,1.0,,5
+136113,Daniel Maldini,104,Cagliari Calcio,3,,1.0,5
+250304,Franco Mastantuono,99,ACF Fiorentina,3,,,5
+182192,Diego Moreira,98,AC Milan,3,,,5
+822,Hassane Kamara,115,Udinese Calcio,2,1.0,,5
+43285,Anastasios Douvikas,7397,Como 1907,2,,,5
+1754,Hakan Çalhanoğlu,108,FC Internazionale Milano,2,,,3
+215433,Francesco Esposito,108,FC Internazionale Milano,2,1.0,,5
+1106,Bremer,109,Juventus FC,2,,,5
+246341,Tiago Gabriel,5890,US Lecce,2,,,4
+192142,Alphadjo Cisse,98,AC Milan,2,,,5
+3368,Adrien Rabiot,98,AC Milan,2,2.0,,5
+4119,Che Adams,586,Torino FC,2,,,3
+192382,Niccolo Pisilli,100,AS Roma,2,,,5
+7567,Jurgen Ekkelenkamp,115,Udinese Calcio,2,1.0,,5
+156912,Martin Baturina,7397,Como 1907,2,1.0,,5
+152770,Rasmus Højlund,113,SSC Napoli,2,,,5
+171121,Matias Soule,100,AS Roma,2,1.0,,5
+67743,Milutin Osmajić,107,Genoa CFC,2,,,4
+218474,Assane Diao,7397,Como 1907,2,1.0,,5
+157538,Mateo Pellegrino,99,ACF Fiorentina,2,,,5
+8685,Marcus Thuram-Ulien,108,FC Internazionale Milano,2,2.0,,5
+171448,Tijjani Noslin,110,SS Lazio,2,,,5
+8658,Lassana Coulibaly,5890,US Lecce,2,1.0,,5
+8990,Edon Zhegrova,109,Juventus FC,2,1.0,,4
+165857,José Romero,112,Parma Calcio 1913,2,,,5
+102395,Manu Koné,100,AS Roma,2,,,5
+2097,Piotr Zieliński,108,FC Internazionale Milano,1,1.0,,5
+193,Yann Aurel Bisseck,108,FC Internazionale Milano,1,1.0,,5
+3654,Kevin De Bruyne,113,SSC Napoli,1,1.0,,5
+176944,Antonio Vergara,113,SSC Napoli,1,,,5
+274076,Alessandro Romano,104,Cagliari Calcio,1,,,5
+226967,Olaf Gorter,5890,US Lecce,1,,,5
+114117,Giacomo Raspadori,102,Atalanta BC,1,,,5
+125523,Cas Odenthal,471,US Sassuolo Calcio,1,,,5
+120679,Nikola Krstović,102,Atalanta BC,1,,,5
+101431,Gonçalo Ramos,98,AC Milan,1,1.0,,5
+175891,Cristian Volpato,471,US Sassuolo Calcio,1,,,3
+217391,Pietro Comuzzo,586,Torino FC,1,,,5
+2202,Domenico Berardi,471,US Sassuolo Calcio,1,,,4
+64243,Jakub Piotrowski,115,Udinese Calcio,1,,,3
+1852,Andrea Colpani,5911,AC Monza,1,,,5
+186575,Gabriele Bracaglia,470,Frosinone Calcio,1,1.0,,5
+45680,Nicolás González,109,Juventus FC,1,,,5
+7693,Teun Koopmeiners,109,Juventus FC,1,1.0,,5
+261273,Rodrigo Mora,100,AS Roma,1,,,5
+130420,Lazar Samardzic,102,Atalanta BC,1,,,5
+203511,Nico Paz,7397,Como 1907,1,1.0,,5
+2230,Rolando Mandragora,586,Torino FC,1,1.0,,5
+2193,Matteo Politano,113,SSC Napoli,1,1.0,,5
+81440,Éderson,102,Atalanta BC,1,,,5
+32703,Mario Hermoso,100,AS Roma,1,,,5
+265567,Jay Robinson,5911,AC Monza,1,,,5
+299423,Simone Lontani,112,Parma Calcio 1913,1,,,5
+98549,John Yeboah,454,Venezia FC,1,,,5
+187435,Richie Sagrado,454,Venezia FC,1,,,5
+122407,Josh Doig,471,US Sassuolo Calcio,1,,,5
+102591,Roberto Piccoli,103,Bologna FC 1909,1,,,5
+24217,Artem Dovbyk,103,Bologna FC 1909,1,,,3
+153130,Federico Gatti,109,Juventus FC,1,,,4
+31065,Jesper Karlström,115,Udinese Calcio,1,,,5
+3851,Albert Guðmundsson,110,SS Lazio,1,,,5
+82132,Akor Adams,454,Venezia FC,1,,,5
+188464,Antoine Hainaut,454,Venezia FC,1,1.0,,5
+39330,Johan Vásquez,107,Genoa CFC,1,,,4
+152787,Matteo Cancellieri,110,SS Lazio,1,,,5
+292394,Paul Mendy,104,Cagliari Calcio,1,,,5
+2681,Gianluca Scamacca,102,Atalanta BC,1,,,5
+53190,Ricardo Mangas,5911,AC Monza,1,2.0,,5
+153632,Exequiel Zeballos,5911,AC Monza,1,,,2
+33628,Stanislav Lobotka,113,SSC Napoli,1,,,5
+114054,Sebastiano Esposito,471,US Sassuolo Calcio,1,,,3
+105081,Kieron Bowie,471,US Sassuolo Calcio,1,,,5
+247056,Jacobo Ramón,7397,Como 1907,1,,,5
+181633,Kaiki Bruno,7397,Como 1907,1,,,5
+187208,James Abankwah,115,Udinese Calcio,1,,,5
+167689,Carlos Augusto Lobaton,108,FC Internazionale Milano,1,1.0,,5
+1911,Nicolò Barella,108,FC Internazionale Milano,1,1.0,,5
+152738,Ange-Yoan Bonny,108,FC Internazionale Milano,1,,,5
+274050,Idrissa Guèye,115,Udinese Calcio,1,,,5
+2040,Federico Bernardeschi,103,Bologna FC 1909,1,,,5
+59075,Sandro Kulenović,586,Torino FC,1,,,5
+2158,Mattia Zaccagni,110,SS Lazio,1,2.0,1.0,5
+126289,Billy Gilmour,113,SSC Napoli,1,,,5
+227048,Álex Jiménez,99,ACF Fiorentina,1,1.0,,5
+40786,Giacomo Calò,470,Frosinone Calcio,1,1.0,,5
+31881,Pontus Almqvist,112,Parma Calcio 1913,1,1.0,,5
+150791,Francisco Conceição,109,Juventus FC,1,1.0,,5
+145,Christian Pulisic,98,AC Milan,1,1.0,,5

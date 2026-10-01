@@ -1,0 +1,381 @@
+date,matchday,home_team,away_team,home_goals,away_goals,status
+2026-08-21T19:00:00Z,1,Arsenal FC,Coventry City FC,3.0,0.0,FINISHED
+2026-08-22T11:30:00Z,1,Hull City AFC,Manchester United FC,2.0,0.0,FINISHED
+2026-08-22T14:00:00Z,1,Ipswich Town FC,Sunderland AFC,2.0,1.0,FINISHED
+2026-08-22T14:00:00Z,1,Nottingham Forest FC,Leeds United FC,0.0,1.0,FINISHED
+2026-08-22T14:00:00Z,1,Everton FC,Crystal Palace FC,2.0,0.0,FINISHED
+2026-08-22T16:30:00Z,1,Brentford FC,Tottenham Hotspur FC,3.0,0.0,FINISHED
+2026-08-23T13:00:00Z,1,Manchester City FC,AFC Bournemouth,2.0,1.0,FINISHED
+2026-08-23T13:00:00Z,1,Brighton & Hove Albion FC,Aston Villa FC,4.0,0.0,FINISHED
+2026-08-23T15:30:00Z,1,Newcastle United FC,Liverpool FC,2.0,2.0,FINISHED
+2026-08-24T19:00:00Z,1,Fulham FC,Chelsea FC,2.0,3.0,FINISHED
+2026-08-28T19:00:00Z,2,Crystal Palace FC,Manchester City FC,1.0,4.0,FINISHED
+2026-08-29T11:30:00Z,2,Liverpool FC,Nottingham Forest FC,2.0,2.0,FINISHED
+2026-08-29T14:00:00Z,2,AFC Bournemouth,Everton FC,1.0,1.0,FINISHED
+2026-08-29T14:00:00Z,2,Coventry City FC,Hull City AFC,0.0,1.0,FINISHED
+2026-08-29T16:30:00Z,2,Tottenham Hotspur FC,Newcastle United FC,0.0,2.0,FINISHED
+2026-08-30T13:00:00Z,2,Sunderland AFC,Fulham FC,1.0,0.0,FINISHED
+2026-08-30T13:00:00Z,2,Chelsea FC,Brighton & Hove Albion FC,4.0,3.0,FINISHED
+2026-08-30T13:00:00Z,2,Leeds United FC,Brentford FC,1.0,1.0,FINISHED
+2026-08-30T15:30:00Z,2,Manchester United FC,Ipswich Town FC,5.0,2.0,FINISHED
+2026-08-31T19:00:00Z,2,Aston Villa FC,Arsenal FC,0.0,1.0,FINISHED
+2026-09-04T19:00:00Z,3,Ipswich Town FC,Liverpool FC,0.0,2.0,FINISHED
+2026-09-05T11:30:00Z,3,Newcastle United FC,AFC Bournemouth,2.0,2.0,FINISHED
+2026-09-05T14:00:00Z,3,Nottingham Forest FC,Tottenham Hotspur FC,0.0,0.0,FINISHED
+2026-09-05T14:00:00Z,3,Manchester City FC,Coventry City FC,1.0,0.0,FINISHED
+2026-09-05T14:00:00Z,3,Brighton & Hove Albion FC,Leeds United FC,1.0,1.0,FINISHED
+2026-09-05T14:00:00Z,3,Brentford FC,Sunderland AFC,1.0,1.0,FINISHED
+2026-09-05T14:00:00Z,3,Fulham FC,Crystal Palace FC,2.0,3.0,FINISHED
+2026-09-05T16:30:00Z,3,Hull City AFC,Aston Villa FC,0.0,0.0,FINISHED
+2026-09-06T13:00:00Z,3,Everton FC,Manchester United FC,2.0,2.0,FINISHED
+2026-09-06T15:30:00Z,3,Arsenal FC,Chelsea FC,2.0,1.0,FINISHED
+2026-09-12T14:00:00Z,4,Crystal Palace FC,Ipswich Town FC,2.0,3.0,FINISHED
+2026-09-12T14:00:00Z,4,Liverpool FC,Fulham FC,0.0,0.0,FINISHED
+2026-09-12T14:00:00Z,4,Aston Villa FC,Nottingham Forest FC,1.0,2.0,FINISHED
+2026-09-12T14:00:00Z,4,AFC Bournemouth,Brentford FC,2.0,2.0,FINISHED
+2026-09-12T14:00:00Z,4,Chelsea FC,Hull City AFC,2.0,2.0,FINISHED
+2026-09-12T16:30:00Z,4,Tottenham Hotspur FC,Everton FC,0.0,0.0,FINISHED
+2026-09-12T19:00:00Z,4,Sunderland AFC,Arsenal FC,0.0,2.0,FINISHED
+2026-09-13T13:00:00Z,4,Coventry City FC,Brighton & Hove Albion FC,0.0,5.0,FINISHED
+2026-09-13T15:30:00Z,4,Manchester United FC,Manchester City FC,0.0,1.0,FINISHED
+2026-09-14T19:00:00Z,4,Leeds United FC,Newcastle United FC,4.0,1.0,FINISHED
+2026-09-18T19:00:00Z,5,Brentford FC,Chelsea FC,3.0,0.0,FINISHED
+2026-09-19T11:30:00Z,5,Tottenham Hotspur FC,Aston Villa FC,2.0,3.0,FINISHED
+2026-09-19T14:00:00Z,5,Everton FC,Ipswich Town FC,1.0,0.0,FINISHED
+2026-09-19T14:00:00Z,5,Brighton & Hove Albion FC,Arsenal FC,3.0,0.0,FINISHED
+2026-09-19T14:00:00Z,5,Newcastle United FC,Hull City AFC,2.0,1.0,FINISHED
+2026-09-19T16:30:00Z,5,Nottingham Forest FC,Coventry City FC,0.0,1.0,FINISHED
+2026-09-20T13:00:00Z,5,AFC Bournemouth,Liverpool FC,0.0,1.0,FINISHED
+2026-09-20T13:00:00Z,5,Leeds United FC,Crystal Palace FC,0.0,0.0,FINISHED
+2026-09-20T13:00:00Z,5,Manchester City FC,Sunderland AFC,5.0,3.0,FINISHED
+2026-09-20T15:30:00Z,5,Fulham FC,Manchester United FC,1.0,1.0,FINISHED
+2026-10-10T11:30:00Z,6,Arsenal FC,Leeds United FC,,,TIMED
+2026-10-10T14:00:00Z,6,Sunderland AFC,Brighton & Hove Albion FC,,,TIMED
+2026-10-10T14:00:00Z,6,Chelsea FC,AFC Bournemouth,,,TIMED
+2026-10-10T14:00:00Z,6,Ipswich Town FC,Fulham FC,,,TIMED
+2026-10-10T14:00:00Z,6,Aston Villa FC,Brentford FC,,,TIMED
+2026-10-10T16:30:00Z,6,Manchester United FC,Tottenham Hotspur FC,,,TIMED
+2026-10-11T13:00:00Z,6,Hull City AFC,Everton FC,,,TIMED
+2026-10-11T13:00:00Z,6,Crystal Palace FC,Nottingham Forest FC,,,TIMED
+2026-10-11T15:30:00Z,6,Liverpool FC,Manchester City FC,,,TIMED
+2026-10-12T19:00:00Z,6,Coventry City FC,Newcastle United FC,,,TIMED
+2026-10-17T11:30:00Z,7,Everton FC,Chelsea FC,,,TIMED
+2026-10-17T14:00:00Z,7,Fulham FC,Hull City AFC,,,TIMED
+2026-10-17T14:00:00Z,7,Manchester City FC,Ipswich Town FC,,,TIMED
+2026-10-17T14:00:00Z,7,Brentford FC,Liverpool FC,,,TIMED
+2026-10-17T16:30:00Z,7,Newcastle United FC,Aston Villa FC,,,TIMED
+2026-10-18T13:00:00Z,7,AFC Bournemouth,Sunderland AFC,,,TIMED
+2026-10-18T13:00:00Z,7,Leeds United FC,Manchester United FC,,,TIMED
+2026-10-18T13:00:00Z,7,Brighton & Hove Albion FC,Crystal Palace FC,,,TIMED
+2026-10-18T15:30:00Z,7,Nottingham Forest FC,Arsenal FC,,,TIMED
+2026-10-19T19:00:00Z,7,Tottenham Hotspur FC,Coventry City FC,,,TIMED
+2026-10-23T19:00:00Z,8,Ipswich Town FC,Nottingham Forest FC,,,TIMED
+2026-10-24T11:30:00Z,8,Aston Villa FC,Manchester City FC,,,TIMED
+2026-10-24T14:00:00Z,8,Arsenal FC,Everton FC,,,TIMED
+2026-10-24T14:00:00Z,8,Coventry City FC,Fulham FC,,,TIMED
+2026-10-24T16:30:00Z,8,Chelsea FC,Tottenham Hotspur FC,,,TIMED
+2026-10-25T14:00:00Z,8,Liverpool FC,Brighton & Hove Albion FC,,,TIMED
+2026-10-25T14:00:00Z,8,Crystal Palace FC,Newcastle United FC,,,TIMED
+2026-10-25T14:00:00Z,8,Manchester United FC,AFC Bournemouth,,,TIMED
+2026-10-25T14:00:00Z,8,Hull City AFC,Brentford FC,,,TIMED
+2026-10-25T16:30:00Z,8,Sunderland AFC,Leeds United FC,,,TIMED
+2026-10-31T12:30:00Z,9,Chelsea FC,Manchester United FC,,,TIMED
+2026-10-31T15:00:00Z,9,Manchester City FC,Brighton & Hove Albion FC,,,TIMED
+2026-10-31T15:00:00Z,9,AFC Bournemouth,Leeds United FC,,,TIMED
+2026-10-31T15:00:00Z,9,Coventry City FC,Sunderland AFC,,,TIMED
+2026-10-31T15:00:00Z,9,Hull City AFC,Ipswich Town FC,,,TIMED
+2026-10-31T15:00:00Z,9,Brentford FC,Nottingham Forest FC,,,TIMED
+2026-10-31T17:30:00Z,9,Tottenham Hotspur FC,Crystal Palace FC,,,TIMED
+2026-10-31T20:00:00Z,9,Aston Villa FC,Fulham FC,,,TIMED
+2026-11-01T16:30:00Z,9,Liverpool FC,Arsenal FC,,,TIMED
+2026-11-02T20:00:00Z,9,Newcastle United FC,Everton FC,,,TIMED
+2026-11-07T15:00:00Z,10,Arsenal FC,Hull City AFC,,,TIMED
+2026-11-07T15:00:00Z,10,Nottingham Forest FC,Manchester City FC,,,TIMED
+2026-11-07T15:00:00Z,10,Leeds United FC,Tottenham Hotspur FC,,,TIMED
+2026-11-07T15:00:00Z,10,Fulham FC,Newcastle United FC,,,TIMED
+2026-11-07T15:00:00Z,10,Everton FC,Coventry City FC,,,TIMED
+2026-11-07T15:00:00Z,10,Crystal Palace FC,Liverpool FC,,,TIMED
+2026-11-07T15:00:00Z,10,Sunderland AFC,Chelsea FC,,,TIMED
+2026-11-07T15:00:00Z,10,Ipswich Town FC,AFC Bournemouth,,,TIMED
+2026-11-07T15:00:00Z,10,Brighton & Hove Albion FC,Brentford FC,,,TIMED
+2026-11-07T15:00:00Z,10,Manchester United FC,Aston Villa FC,,,TIMED
+2026-11-21T15:00:00Z,11,Chelsea FC,Leeds United FC,,,TIMED
+2026-11-21T15:00:00Z,11,Manchester City FC,Fulham FC,,,TIMED
+2026-11-21T15:00:00Z,11,Aston Villa FC,Sunderland AFC,,,TIMED
+2026-11-21T15:00:00Z,11,Liverpool FC,Manchester United FC,,,TIMED
+2026-11-21T15:00:00Z,11,Hull City AFC,Brighton & Hove Albion FC,,,TIMED
+2026-11-21T15:00:00Z,11,AFC Bournemouth,Nottingham Forest FC,,,TIMED
+2026-11-21T15:00:00Z,11,Tottenham Hotspur FC,Ipswich Town FC,,,TIMED
+2026-11-21T15:00:00Z,11,Brentford FC,Everton FC,,,TIMED
+2026-11-21T15:00:00Z,11,Coventry City FC,Crystal Palace FC,,,TIMED
+2026-11-21T15:00:00Z,11,Newcastle United FC,Arsenal FC,,,TIMED
+2026-11-28T15:00:00Z,12,Leeds United FC,Coventry City FC,,,TIMED
+2026-11-28T15:00:00Z,12,Ipswich Town FC,Aston Villa FC,,,TIMED
+2026-11-28T15:00:00Z,12,Arsenal FC,Manchester City FC,,,TIMED
+2026-11-28T15:00:00Z,12,Manchester United FC,Brentford FC,,,TIMED
+2026-11-28T15:00:00Z,12,Everton FC,Liverpool FC,,,TIMED
+2026-11-28T15:00:00Z,12,Fulham FC,AFC Bournemouth,,,TIMED
+2026-11-28T15:00:00Z,12,Nottingham Forest FC,Chelsea FC,,,TIMED
+2026-11-28T15:00:00Z,12,Brighton & Hove Albion FC,Newcastle United FC,,,TIMED
+2026-11-28T15:00:00Z,12,Sunderland AFC,Tottenham Hotspur FC,,,TIMED
+2026-11-28T15:00:00Z,12,Crystal Palace FC,Hull City AFC,,,TIMED
+2026-12-02T20:00:00Z,13,Tottenham Hotspur FC,Fulham FC,,,TIMED
+2026-12-02T20:00:00Z,13,Liverpool FC,Sunderland AFC,,,TIMED
+2026-12-02T20:00:00Z,13,Hull City AFC,Nottingham Forest FC,,,TIMED
+2026-12-02T20:00:00Z,13,Chelsea FC,Crystal Palace FC,,,TIMED
+2026-12-02T20:00:00Z,13,Aston Villa FC,Everton FC,,,TIMED
+2026-12-02T20:00:00Z,13,Brentford FC,Arsenal FC,,,TIMED
+2026-12-02T20:00:00Z,13,Coventry City FC,Ipswich Town FC,,,TIMED
+2026-12-02T20:00:00Z,13,Manchester City FC,Leeds United FC,,,TIMED
+2026-12-02T20:00:00Z,13,Newcastle United FC,Manchester United FC,,,TIMED
+2026-12-02T20:00:00Z,13,AFC Bournemouth,Brighton & Hove Albion FC,,,TIMED
+2026-12-05T15:00:00Z,14,Tottenham Hotspur FC,Arsenal FC,,,TIMED
+2026-12-05T15:00:00Z,14,Manchester United FC,Coventry City FC,,,TIMED
+2026-12-05T15:00:00Z,14,Leeds United FC,Ipswich Town FC,,,TIMED
+2026-12-05T15:00:00Z,14,Newcastle United FC,Sunderland AFC,,,TIMED
+2026-12-05T15:00:00Z,14,Chelsea FC,Liverpool FC,,,TIMED
+2026-12-05T15:00:00Z,14,Brentford FC,Manchester City FC,,,TIMED
+2026-12-05T15:00:00Z,14,AFC Bournemouth,Hull City AFC,,,TIMED
+2026-12-05T15:00:00Z,14,Aston Villa FC,Crystal Palace FC,,,TIMED
+2026-12-05T15:00:00Z,14,Nottingham Forest FC,Brighton & Hove Albion FC,,,TIMED
+2026-12-05T15:00:00Z,14,Everton FC,Fulham FC,,,TIMED
+2026-12-12T15:00:00Z,15,Sunderland AFC,Nottingham Forest FC,,,TIMED
+2026-12-12T15:00:00Z,15,Crystal Palace FC,Manchester United FC,,,TIMED
+2026-12-12T15:00:00Z,15,Hull City AFC,Tottenham Hotspur FC,,,TIMED
+2026-12-12T15:00:00Z,15,Brighton & Hove Albion FC,Everton FC,,,TIMED
+2026-12-12T15:00:00Z,15,Ipswich Town FC,Newcastle United FC,,,TIMED
+2026-12-12T15:00:00Z,15,Coventry City FC,Aston Villa FC,,,TIMED
+2026-12-12T15:00:00Z,15,Arsenal FC,AFC Bournemouth,,,TIMED
+2026-12-12T15:00:00Z,15,Manchester City FC,Chelsea FC,,,TIMED
+2026-12-12T15:00:00Z,15,Liverpool FC,Leeds United FC,,,TIMED
+2026-12-12T15:00:00Z,15,Fulham FC,Brentford FC,,,TIMED
+2026-12-19T15:00:00Z,16,Leeds United FC,Fulham FC,,,TIMED
+2026-12-19T15:00:00Z,16,Brighton & Hove Albion FC,Ipswich Town FC,,,TIMED
+2026-12-19T15:00:00Z,16,Nottingham Forest FC,Everton FC,,,TIMED
+2026-12-19T15:00:00Z,16,Brentford FC,Newcastle United FC,,,TIMED
+2026-12-19T15:00:00Z,16,Manchester City FC,Hull City AFC,,,TIMED
+2026-12-19T15:00:00Z,16,Sunderland AFC,Crystal Palace FC,,,TIMED
+2026-12-19T15:00:00Z,16,AFC Bournemouth,Coventry City FC,,,TIMED
+2026-12-19T15:00:00Z,16,Arsenal FC,Manchester United FC,,,TIMED
+2026-12-19T15:00:00Z,16,Liverpool FC,Tottenham Hotspur FC,,,TIMED
+2026-12-19T15:00:00Z,16,Chelsea FC,Aston Villa FC,,,TIMED
+2026-12-26T12:30:00Z,17,Aston Villa FC,Leeds United FC,,,TIMED
+2026-12-26T15:00:00Z,17,Everton FC,Sunderland AFC,,,TIMED
+2026-12-26T15:00:00Z,17,Fulham FC,Brighton & Hove Albion FC,,,TIMED
+2026-12-26T15:00:00Z,17,Tottenham Hotspur FC,AFC Bournemouth,,,TIMED
+2026-12-26T15:00:00Z,17,Ipswich Town FC,Brentford FC,,,TIMED
+2026-12-26T17:30:00Z,17,Hull City AFC,Liverpool FC,,,TIMED
+2026-12-26T20:00:00Z,17,Newcastle United FC,Manchester City FC,,,TIMED
+2026-12-27T14:00:00Z,17,Coventry City FC,Chelsea FC,,,TIMED
+2026-12-27T16:30:00Z,17,Manchester United FC,Nottingham Forest FC,,,TIMED
+2026-12-27T19:00:00Z,17,Crystal Palace FC,Arsenal FC,,,TIMED
+2026-12-29T19:30:00Z,18,Hull City AFC,Leeds United FC,,,TIMED
+2026-12-29T19:30:00Z,18,Tottenham Hotspur FC,Brighton & Hove Albion FC,,,TIMED
+2026-12-29T20:15:00Z,18,Everton FC,Manchester City FC,,,TIMED
+2026-12-30T19:30:00Z,18,Fulham FC,Arsenal FC,,,TIMED
+2026-12-30T19:30:00Z,18,Coventry City FC,Brentford FC,,,TIMED
+2026-12-30T19:30:00Z,18,Newcastle United FC,Nottingham Forest FC,,,TIMED
+2026-12-30T19:30:00Z,18,Manchester United FC,Sunderland AFC,,,TIMED
+2026-12-30T19:30:00Z,18,Crystal Palace FC,AFC Bournemouth,,,TIMED
+2026-12-30T20:15:00Z,18,Aston Villa FC,Liverpool FC,,,TIMED
+2026-12-30T20:15:00Z,18,Ipswich Town FC,Chelsea FC,,,TIMED
+2027-01-01T20:00:00Z,19,Leeds United FC,Everton FC,,,TIMED
+2027-01-02T12:30:00Z,19,Brighton & Hove Albion FC,Manchester United FC,,,TIMED
+2027-01-02T15:00:00Z,19,Brentford FC,Crystal Palace FC,,,TIMED
+2027-01-02T15:00:00Z,19,Arsenal FC,Ipswich Town FC,,,TIMED
+2027-01-02T15:00:00Z,19,Sunderland AFC,Hull City AFC,,,TIMED
+2027-01-02T15:00:00Z,19,Liverpool FC,Coventry City FC,,,TIMED
+2027-01-02T15:00:00Z,19,Nottingham Forest FC,Fulham FC,,,TIMED
+2027-01-02T17:30:00Z,19,AFC Bournemouth,Aston Villa FC,,,TIMED
+2027-01-03T14:00:00Z,19,Chelsea FC,Newcastle United FC,,,TIMED
+2027-01-03T16:30:00Z,19,Manchester City FC,Tottenham Hotspur FC,,,TIMED
+2027-01-05T19:30:00Z,20,Arsenal FC,Brentford FC,,,TIMED
+2027-01-05T19:30:00Z,20,Brighton & Hove Albion FC,AFC Bournemouth,,,TIMED
+2027-01-05T19:30:00Z,20,Nottingham Forest FC,Hull City AFC,,,TIMED
+2027-01-05T19:30:00Z,20,Everton FC,Aston Villa FC,,,TIMED
+2027-01-05T20:15:00Z,20,Sunderland AFC,Liverpool FC,,,TIMED
+2027-01-06T19:30:00Z,20,Fulham FC,Tottenham Hotspur FC,,,TIMED
+2027-01-06T19:30:00Z,20,Crystal Palace FC,Chelsea FC,,,TIMED
+2027-01-06T19:30:00Z,20,Ipswich Town FC,Coventry City FC,,,TIMED
+2027-01-06T20:15:00Z,20,Leeds United FC,Manchester City FC,,,TIMED
+2027-01-07T20:00:00Z,20,Manchester United FC,Newcastle United FC,,,TIMED
+2027-01-16T15:00:00Z,21,AFC Bournemouth,Ipswich Town FC,,,TIMED
+2027-01-16T15:00:00Z,21,Manchester City FC,Nottingham Forest FC,,,TIMED
+2027-01-16T15:00:00Z,21,Chelsea FC,Sunderland AFC,,,TIMED
+2027-01-16T15:00:00Z,21,Brentford FC,Brighton & Hove Albion FC,,,TIMED
+2027-01-16T15:00:00Z,21,Aston Villa FC,Manchester United FC,,,TIMED
+2027-01-16T15:00:00Z,21,Tottenham Hotspur FC,Leeds United FC,,,TIMED
+2027-01-16T15:00:00Z,21,Coventry City FC,Everton FC,,,TIMED
+2027-01-16T15:00:00Z,21,Liverpool FC,Crystal Palace FC,,,TIMED
+2027-01-16T15:00:00Z,21,Hull City AFC,Arsenal FC,,,TIMED
+2027-01-16T15:00:00Z,21,Newcastle United FC,Fulham FC,,,TIMED
+2027-01-23T15:00:00Z,22,Ipswich Town FC,Hull City AFC,,,TIMED
+2027-01-23T15:00:00Z,22,Everton FC,Brentford FC,,,TIMED
+2027-01-23T15:00:00Z,22,Sunderland AFC,Coventry City FC,,,TIMED
+2027-01-23T15:00:00Z,22,Nottingham Forest FC,AFC Bournemouth,,,TIMED
+2027-01-23T15:00:00Z,22,Arsenal FC,Newcastle United FC,,,TIMED
+2027-01-23T15:00:00Z,22,Leeds United FC,Chelsea FC,,,TIMED
+2027-01-23T15:00:00Z,22,Fulham FC,Aston Villa FC,,,TIMED
+2027-01-23T15:00:00Z,22,Manchester United FC,Liverpool FC,,,TIMED
+2027-01-23T15:00:00Z,22,Brighton & Hove Albion FC,Manchester City FC,,,TIMED
+2027-01-23T15:00:00Z,22,Crystal Palace FC,Tottenham Hotspur FC,,,TIMED
+2027-01-30T15:00:00Z,23,Tottenham Hotspur FC,Sunderland AFC,,,TIMED
+2027-01-30T15:00:00Z,23,Brentford FC,Manchester United FC,,,TIMED
+2027-01-30T15:00:00Z,23,Newcastle United FC,Brighton & Hove Albion FC,,,TIMED
+2027-01-30T15:00:00Z,23,Hull City AFC,Crystal Palace FC,,,TIMED
+2027-01-30T15:00:00Z,23,Coventry City FC,Leeds United FC,,,TIMED
+2027-01-30T15:00:00Z,23,AFC Bournemouth,Fulham FC,,,TIMED
+2027-01-30T15:00:00Z,23,Chelsea FC,Nottingham Forest FC,,,TIMED
+2027-01-30T15:00:00Z,23,Liverpool FC,Everton FC,,,TIMED
+2027-01-30T15:00:00Z,23,Manchester City FC,Arsenal FC,,,TIMED
+2027-01-30T15:00:00Z,23,Aston Villa FC,Ipswich Town FC,,,TIMED
+2027-02-06T15:00:00Z,24,Arsenal FC,Liverpool FC,,,TIMED
+2027-02-06T15:00:00Z,24,Brighton & Hove Albion FC,Hull City AFC,,,TIMED
+2027-02-06T15:00:00Z,24,Sunderland AFC,Aston Villa FC,,,TIMED
+2027-02-06T15:00:00Z,24,Crystal Palace FC,Coventry City FC,,,TIMED
+2027-02-06T15:00:00Z,24,Ipswich Town FC,Tottenham Hotspur FC,,,TIMED
+2027-02-06T15:00:00Z,24,Everton FC,Newcastle United FC,,,TIMED
+2027-02-06T15:00:00Z,24,Fulham FC,Manchester City FC,,,TIMED
+2027-02-06T15:00:00Z,24,Leeds United FC,AFC Bournemouth,,,TIMED
+2027-02-06T15:00:00Z,24,Manchester United FC,Chelsea FC,,,TIMED
+2027-02-06T15:00:00Z,24,Nottingham Forest FC,Brentford FC,,,TIMED
+2027-02-10T20:00:00Z,25,Everton FC,Leeds United FC,,,TIMED
+2027-02-10T20:00:00Z,25,Coventry City FC,Liverpool FC,,,TIMED
+2027-02-10T20:00:00Z,25,Hull City AFC,Sunderland AFC,,,TIMED
+2027-02-10T20:00:00Z,25,Aston Villa FC,AFC Bournemouth,,,TIMED
+2027-02-10T20:00:00Z,25,Crystal Palace FC,Brentford FC,,,TIMED
+2027-02-10T20:00:00Z,25,Newcastle United FC,Chelsea FC,,,TIMED
+2027-02-10T20:00:00Z,25,Fulham FC,Nottingham Forest FC,,,TIMED
+2027-02-10T20:00:00Z,25,Tottenham Hotspur FC,Manchester City FC,,,TIMED
+2027-02-10T20:00:00Z,25,Manchester United FC,Brighton & Hove Albion FC,,,TIMED
+2027-02-10T20:00:00Z,25,Ipswich Town FC,Arsenal FC,,,TIMED
+2027-02-20T15:00:00Z,26,Manchester City FC,Newcastle United FC,,,TIMED
+2027-02-20T15:00:00Z,26,AFC Bournemouth,Crystal Palace FC,,,TIMED
+2027-02-20T15:00:00Z,26,Brentford FC,Coventry City FC,,,TIMED
+2027-02-20T15:00:00Z,26,Chelsea FC,Ipswich Town FC,,,TIMED
+2027-02-20T15:00:00Z,26,Liverpool FC,Hull City AFC,,,TIMED
+2027-02-20T15:00:00Z,26,Arsenal FC,Fulham FC,,,TIMED
+2027-02-20T15:00:00Z,26,Nottingham Forest FC,Manchester United FC,,,TIMED
+2027-02-20T15:00:00Z,26,Brighton & Hove Albion FC,Tottenham Hotspur FC,,,TIMED
+2027-02-20T15:00:00Z,26,Sunderland AFC,Everton FC,,,TIMED
+2027-02-20T15:00:00Z,26,Leeds United FC,Aston Villa FC,,,TIMED
+2027-02-27T15:00:00Z,27,Crystal Palace FC,Sunderland AFC,,,TIMED
+2027-02-27T15:00:00Z,27,Manchester United FC,Arsenal FC,,,TIMED
+2027-02-27T15:00:00Z,27,Ipswich Town FC,Brighton & Hove Albion FC,,,TIMED
+2027-02-27T15:00:00Z,27,Coventry City FC,AFC Bournemouth,,,TIMED
+2027-02-27T15:00:00Z,27,Everton FC,Nottingham Forest FC,,,TIMED
+2027-02-27T15:00:00Z,27,Fulham FC,Leeds United FC,,,TIMED
+2027-02-27T15:00:00Z,27,Aston Villa FC,Chelsea FC,,,TIMED
+2027-02-27T15:00:00Z,27,Tottenham Hotspur FC,Liverpool FC,,,TIMED
+2027-02-27T15:00:00Z,27,Newcastle United FC,Brentford FC,,,TIMED
+2027-02-27T15:00:00Z,27,Hull City AFC,Manchester City FC,,,TIMED
+2027-03-03T20:00:00Z,28,Nottingham Forest FC,Newcastle United FC,,,TIMED
+2027-03-03T20:00:00Z,28,AFC Bournemouth,Tottenham Hotspur FC,,,TIMED
+2027-03-03T20:00:00Z,28,Manchester City FC,Everton FC,,,TIMED
+2027-03-03T20:00:00Z,28,Arsenal FC,Crystal Palace FC,,,TIMED
+2027-03-03T20:00:00Z,28,Leeds United FC,Hull City AFC,,,TIMED
+2027-03-03T20:00:00Z,28,Sunderland AFC,Manchester United FC,,,TIMED
+2027-03-03T20:00:00Z,28,Liverpool FC,Aston Villa FC,,,TIMED
+2027-03-03T20:00:00Z,28,Brighton & Hove Albion FC,Fulham FC,,,TIMED
+2027-03-03T20:00:00Z,28,Brentford FC,Ipswich Town FC,,,TIMED
+2027-03-03T20:00:00Z,28,Chelsea FC,Coventry City FC,,,TIMED
+2027-03-13T15:00:00Z,29,Leeds United FC,Brighton & Hove Albion FC,,,TIMED
+2027-03-13T15:00:00Z,29,Tottenham Hotspur FC,Nottingham Forest FC,,,TIMED
+2027-03-13T15:00:00Z,29,Crystal Palace FC,Fulham FC,,,TIMED
+2027-03-13T15:00:00Z,29,Liverpool FC,Ipswich Town FC,,,TIMED
+2027-03-13T15:00:00Z,29,Coventry City FC,Manchester City FC,,,TIMED
+2027-03-13T15:00:00Z,29,AFC Bournemouth,Newcastle United FC,,,TIMED
+2027-03-13T15:00:00Z,29,Chelsea FC,Arsenal FC,,,TIMED
+2027-03-13T15:00:00Z,29,Aston Villa FC,Hull City AFC,,,TIMED
+2027-03-13T15:00:00Z,29,Manchester United FC,Everton FC,,,TIMED
+2027-03-13T15:00:00Z,29,Sunderland AFC,Brentford FC,,,TIMED
+2027-03-20T15:00:00Z,30,Brentford FC,AFC Bournemouth,,,TIMED
+2027-03-20T15:00:00Z,30,Brighton & Hove Albion FC,Coventry City FC,,,TIMED
+2027-03-20T15:00:00Z,30,Manchester City FC,Manchester United FC,,,TIMED
+2027-03-20T15:00:00Z,30,Ipswich Town FC,Crystal Palace FC,,,TIMED
+2027-03-20T15:00:00Z,30,Arsenal FC,Sunderland AFC,,,TIMED
+2027-03-20T15:00:00Z,30,Fulham FC,Liverpool FC,,,TIMED
+2027-03-20T15:00:00Z,30,Hull City AFC,Chelsea FC,,,TIMED
+2027-03-20T15:00:00Z,30,Nottingham Forest FC,Aston Villa FC,,,TIMED
+2027-03-20T15:00:00Z,30,Everton FC,Tottenham Hotspur FC,,,TIMED
+2027-03-20T15:00:00Z,30,Newcastle United FC,Leeds United FC,,,TIMED
+2027-04-10T14:00:00Z,31,Sunderland AFC,Ipswich Town FC,,,TIMED
+2027-04-10T14:00:00Z,31,Leeds United FC,Nottingham Forest FC,,,TIMED
+2027-04-10T14:00:00Z,31,Manchester United FC,Hull City AFC,,,TIMED
+2027-04-10T14:00:00Z,31,Chelsea FC,Fulham FC,,,TIMED
+2027-04-10T14:00:00Z,31,Liverpool FC,Newcastle United FC,,,TIMED
+2027-04-10T14:00:00Z,31,Coventry City FC,Arsenal FC,,,TIMED
+2027-04-10T14:00:00Z,31,AFC Bournemouth,Manchester City FC,,,TIMED
+2027-04-10T14:00:00Z,31,Crystal Palace FC,Everton FC,,,TIMED
+2027-04-10T14:00:00Z,31,Tottenham Hotspur FC,Brentford FC,,,TIMED
+2027-04-10T14:00:00Z,31,Aston Villa FC,Brighton & Hove Albion FC,,,TIMED
+2027-04-17T14:00:00Z,32,Brighton & Hove Albion FC,Chelsea FC,,,TIMED
+2027-04-17T14:00:00Z,32,Fulham FC,Sunderland AFC,,,TIMED
+2027-04-17T14:00:00Z,32,Brentford FC,Leeds United FC,,,TIMED
+2027-04-17T14:00:00Z,32,Nottingham Forest FC,Liverpool FC,,,TIMED
+2027-04-17T14:00:00Z,32,Hull City AFC,Coventry City FC,,,TIMED
+2027-04-17T14:00:00Z,32,Arsenal FC,Aston Villa FC,,,TIMED
+2027-04-17T14:00:00Z,32,Ipswich Town FC,Manchester United FC,,,TIMED
+2027-04-17T14:00:00Z,32,Manchester City FC,Crystal Palace FC,,,TIMED
+2027-04-17T14:00:00Z,32,Newcastle United FC,Tottenham Hotspur FC,,,TIMED
+2027-04-17T14:00:00Z,32,Everton FC,AFC Bournemouth,,,TIMED
+2027-04-24T14:00:00Z,33,Chelsea FC,Manchester City FC,,,TIMED
+2027-04-24T14:00:00Z,33,AFC Bournemouth,Arsenal FC,,,TIMED
+2027-04-24T14:00:00Z,33,Tottenham Hotspur FC,Hull City AFC,,,TIMED
+2027-04-24T14:00:00Z,33,Manchester United FC,Crystal Palace FC,,,TIMED
+2027-04-24T14:00:00Z,33,Everton FC,Brighton & Hove Albion FC,,,TIMED
+2027-04-24T14:00:00Z,33,Nottingham Forest FC,Sunderland AFC,,,TIMED
+2027-04-24T14:00:00Z,33,Newcastle United FC,Ipswich Town FC,,,TIMED
+2027-04-24T14:00:00Z,33,Aston Villa FC,Coventry City FC,,,TIMED
+2027-04-24T14:00:00Z,33,Brentford FC,Fulham FC,,,TIMED
+2027-04-24T14:00:00Z,33,Leeds United FC,Liverpool FC,,,TIMED
+2027-05-01T14:00:00Z,34,Sunderland AFC,Newcastle United FC,,,TIMED
+2027-05-01T14:00:00Z,34,Brighton & Hove Albion FC,Nottingham Forest FC,,,TIMED
+2027-05-01T14:00:00Z,34,Coventry City FC,Manchester United FC,,,TIMED
+2027-05-01T14:00:00Z,34,Hull City AFC,AFC Bournemouth,,,TIMED
+2027-05-01T14:00:00Z,34,Manchester City FC,Brentford FC,,,TIMED
+2027-05-01T14:00:00Z,34,Fulham FC,Everton FC,,,TIMED
+2027-05-01T14:00:00Z,34,Liverpool FC,Chelsea FC,,,TIMED
+2027-05-01T14:00:00Z,34,Arsenal FC,Tottenham Hotspur FC,,,TIMED
+2027-05-01T14:00:00Z,34,Crystal Palace FC,Aston Villa FC,,,TIMED
+2027-05-01T14:00:00Z,34,Ipswich Town FC,Leeds United FC,,,TIMED
+2027-05-08T14:00:00Z,35,Manchester City FC,Liverpool FC,,,TIMED
+2027-05-08T14:00:00Z,35,Leeds United FC,Arsenal FC,,,TIMED
+2027-05-08T14:00:00Z,35,Fulham FC,Ipswich Town FC,,,TIMED
+2027-05-08T14:00:00Z,35,Nottingham Forest FC,Crystal Palace FC,,,TIMED
+2027-05-08T14:00:00Z,35,Brentford FC,Aston Villa FC,,,TIMED
+2027-05-08T14:00:00Z,35,Newcastle United FC,Coventry City FC,,,TIMED
+2027-05-08T14:00:00Z,35,Brighton & Hove Albion FC,Sunderland AFC,,,TIMED
+2027-05-08T14:00:00Z,35,Tottenham Hotspur FC,Chelsea FC,,,TIMED
+2027-05-08T14:00:00Z,35,Everton FC,Hull City AFC,,,TIMED
+2027-05-08T14:00:00Z,35,AFC Bournemouth,Manchester United FC,,,TIMED
+2027-05-15T14:00:00Z,36,Hull City AFC,Fulham FC,,,TIMED
+2027-05-15T14:00:00Z,36,Manchester United FC,Leeds United FC,,,TIMED
+2027-05-15T14:00:00Z,36,Crystal Palace FC,Brighton & Hove Albion FC,,,TIMED
+2027-05-15T14:00:00Z,36,Aston Villa FC,Newcastle United FC,,,TIMED
+2027-05-15T14:00:00Z,36,Chelsea FC,Everton FC,,,TIMED
+2027-05-15T14:00:00Z,36,Coventry City FC,Tottenham Hotspur FC,,,TIMED
+2027-05-15T14:00:00Z,36,Sunderland AFC,AFC Bournemouth,,,TIMED
+2027-05-15T14:00:00Z,36,Liverpool FC,Brentford FC,,,TIMED
+2027-05-15T14:00:00Z,36,Ipswich Town FC,Manchester City FC,,,TIMED
+2027-05-15T14:00:00Z,36,Arsenal FC,Nottingham Forest FC,,,TIMED
+2027-05-23T14:00:00Z,37,Brentford FC,Hull City AFC,,,TIMED
+2027-05-23T14:00:00Z,37,Newcastle United FC,Crystal Palace FC,,,TIMED
+2027-05-23T14:00:00Z,37,Tottenham Hotspur FC,Manchester United FC,,,TIMED
+2027-05-23T14:00:00Z,37,Leeds United FC,Sunderland AFC,,,TIMED
+2027-05-23T14:00:00Z,37,Brighton & Hove Albion FC,Liverpool FC,,,TIMED
+2027-05-23T14:00:00Z,37,Nottingham Forest FC,Ipswich Town FC,,,TIMED
+2027-05-23T14:00:00Z,37,AFC Bournemouth,Chelsea FC,,,TIMED
+2027-05-23T14:00:00Z,37,Fulham FC,Coventry City FC,,,TIMED
+2027-05-23T14:00:00Z,37,Everton FC,Arsenal FC,,,TIMED
+2027-05-23T14:00:00Z,37,Manchester City FC,Aston Villa FC,,,TIMED
+2027-05-30T15:00:00Z,38,Ipswich Town FC,Everton FC,,,TIMED
+2027-05-30T15:00:00Z,38,Arsenal FC,Brighton & Hove Albion FC,,,TIMED
+2027-05-30T15:00:00Z,38,Liverpool FC,AFC Bournemouth,,,TIMED
+2027-05-30T15:00:00Z,38,Coventry City FC,Nottingham Forest FC,,,TIMED
+2027-05-30T15:00:00Z,38,Aston Villa FC,Tottenham Hotspur FC,,,TIMED
+2027-05-30T15:00:00Z,38,Hull City AFC,Newcastle United FC,,,TIMED
+2027-05-30T15:00:00Z,38,Manchester United FC,Fulham FC,,,TIMED
+2027-05-30T15:00:00Z,38,Sunderland AFC,Manchester City FC,,,TIMED
+2027-05-30T15:00:00Z,38,Chelsea FC,Brentford FC,,,TIMED
+2027-05-30T15:00:00Z,38,Crystal Palace FC,Leeds United FC,,,TIMED

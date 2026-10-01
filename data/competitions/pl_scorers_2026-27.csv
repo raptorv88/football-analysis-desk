@@ -1,0 +1,91 @@
+player_id,player,team_id,team,goals,assists,penalties,played_matches
+38101,Erling Haaland,65,Manchester City FC,5,,,5
+6486,Alexander Isak,64,Liverpool FC,4,,,5
+99813,Bukayo Saka,57,Arsenal FC,3,,1.0,5
+6396,Marcus Tavernier,1044,AFC Bournemouth,3,,,5
+103125,João Pedro,61,Chelsea FC,3,3.0,,4
+82140,Morgan Rogers,61,Chelsea FC,3,1.0,,5
+133242,Rayan Cherki,65,Manchester City FC,3,2.0,,5
+8273,Pascal Groß,397,Brighton & Hove Albion FC,3,3.0,1.0,5
+123286,Kevin Schade,402,Brentford FC,3,,,5
+3257,Bruno Fernandes,66,Manchester United FC,3,1.0,1.0,5
+97535,Brian Brobbey,71,Sunderland AFC,3,,,5
+171,Kai Havertz,57,Arsenal FC,2,,,5
+7427,Martin Ødegaard,57,Arsenal FC,2,,,5
+176628,Emersonn,349,Ipswich Town FC,2,1.0,,5
+171995,Thierno Barry,62,Everton FC,2,,,5
+10000,Vitaly Janelt,402,Brentford FC,2,,,5
+190851,Jack Hinshelwood,397,Brighton & Hove Albion FC,2,,,1
+166376,Anthony Elanga,67,Newcastle United FC,2,,,3
+7798,Joe Willock,67,Newcastle United FC,2,,,5
+246418,Joshua King,63,Fulham FC,2,,,5
+144892,Cole Palmer,61,Chelsea FC,2,2.0,,5
+246670,Malick Yalcouyé,397,Brighton & Hove Albion FC,2,,,5
+7839,Dominic Calvert-Lewin,341,Leeds United FC,2,1.0,,5
+99120,Leif Davis,349,Ipswich Town FC,2,1.0,,5
+8626,Bryan Mbeumo,66,Manchester United FC,2,,,5
+4184,Jayden Bogle,341,Leeds United FC,2,,,5
+137068,Tyrick Mitchell,354,Crystal Palace FC,2,,,5
+213072,Mohamed Belloumi,322,Hull City AFC,2,2.0,,5
+264300,Charalampos Kostoulas,397,Brighton & Hove Albion FC,2,1.0,,5
+4417,Antoine Semenyo,65,Manchester City FC,2,3.0,,5
+6451,Semi Ajayi,322,Hull City AFC,1,,,5
+190558,Nobel Mendy,322,Hull City AFC,1,,,4
+187375,Nilson Angulo,71,Sunderland AFC,1,1.0,,5
+4158,Jack Clarke,349,Ipswich Town FC,1,,,5
+65843,Anton Stach,341,Leeds United FC,1,,,5
+140194,Kiernan Dewsbury Hall,62,Everton FC,1,,,5
+101910,Keane Lewis-Potter,402,Brentford FC,1,1.0,,5
+204348,Michael Kayode,402,Brentford FC,1,,,5
+118489,Marc Guéhi,65,Manchester City FC,1,1.0,,5
+122266,Joško Gvardiol,65,Manchester City FC,1,2.0,,5
+142075,Maxim De Cuyper,397,Brighton & Hove Albion FC,1,2.0,,5
+7459,Cody Gakpo,64,Liverpool FC,1,3.0,,5
+16347,Dominik Szoboszlai,64,Liverpool FC,1,,1.0,5
+217658,Gonzalo García,63,Fulham FC,1,,,5
+77641,Dan Ndoye,351,Nottingham Forest FC,1,,,5
+4091,Morgan Gibbs-White,351,Nottingham Forest FC,1,2.0,1.0,5
+273423,Víctor Muñoz,64,Liverpool FC,1,,,5
+161088,Alex Scott,1044,AFC Bournemouth,1,,,5
+3316,James Tarkowski,62,Everton FC,1,1.0,,5
+110807,Liam Millar,322,Hull City AFC,1,,,2
+612,Yoane Wissa,67,Newcastle United FC,1,1.0,,5
+83599,Wilson Isidor,71,Sunderland AFC,1,,,5
+172738,Romeo Lavia,61,Chelsea FC,1,,,5
+2074,Pedro Neto,61,Chelsea FC,1,,,5
+9053,Chuba Akpom,349,Ipswich Town FC,1,,,4
+8076,Harvey Barnes,67,Newcastle United FC,1,2.0,,5
+111437,Jacob Ramsey,67,Newcastle United FC,1,,,4
+216835,Luka Vušković,397,Brighton & Hove Albion FC,1,,,5
+99664,Enzo Le Fée,71,Sunderland AFC,1,1.0,1.0,5
+290848,César Palacios,63,Fulham FC,1,,,5
+8065,Ben Chilwell,354,Crystal Palace FC,1,,,3
+250436,Tyrique George,62,Everton FC,1,,,5
+124244,Benjamin Šeško,66,Manchester United FC,1,,,4
+7792,Ainsley Maitland-Niles,62,Everton FC,1,,,3
+213425,Anan Khalaili,354,Crystal Palace FC,1,,,5
+213269,Jørgen Strand Larsen,354,Crystal Palace FC,1,,,5
+67893,Zian Flemming,349,Ipswich Town FC,1,,,3
+151095,Liam Delap,351,Nottingham Forest FC,1,,,4
+260718,Alysson,58,Aston Villa FC,1,,,4
+256339,Igor Jesus,351,Nottingham Forest FC,1,,,5
+7561,Justin Kluivert,1044,AFC Bournemouth,1,,,4
+1684,Bruno Guimarães,57,Arsenal FC,1,,,4
+8259,Lewis Dunk,397,Brighton & Hove Albion FC,1,,,4
+145613,Yasin Ayari,397,Brighton & Hove Albion FC,1,1.0,,4
+16058,Noah Okafor,341,Leeds United FC,1,,,5
+249312,Bazoumana Touré,67,Newcastle United FC,1,,,5
+150778,Jaidon Anthony,402,Brentford FC,1,,,5
+138230,Thiago,402,Brentford FC,1,,,5
+151119,Fabio Carvalho,402,Brentford FC,1,,,4
+212309,Johan Manzambi,58,Aston Villa FC,1,1.0,,2
+152515,Nicolas Jackson,58,Aston Villa FC,1,,,4
+31941,Emiliano Buendía,58,Aston Villa FC,1,,,5
+119265,Conor Gallagher,73,Tottenham Hotspur FC,1,,,5
+98566,Jan Paul van Hecke,73,Tottenham Hotspur FC,1,,,5
+270273,Chema Andrés,397,Brighton & Hove Albion FC,1,1.0,,3
+191140,Lewis Hall,67,Newcastle United FC,1,1.0,,5
+213270,Mohamed Cho,322,Hull City AFC,1,,,4
+6308,Jay Dasilva,1076,Coventry City FC,1,,,5
+102603,Enzo Fernández,65,Manchester City FC,1,,,4
+30842,Matheus Cunha,66,Manchester United FC,1,1.0,,5
