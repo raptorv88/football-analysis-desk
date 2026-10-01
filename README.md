@@ -1,4 +1,4 @@
-# PL Match Predictor
+# Football Analysis Desk
 
 Run these commands **in order, from inside the `pl_app` folder** (the one
 this README is in — not the `app` subfolder). Every command uses
