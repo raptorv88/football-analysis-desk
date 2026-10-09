@@ -3,11 +3,13 @@
 from __future__ import annotations
 
 from pathlib import Path
+import os
 
 import pandas as pd
 
 
-DATA_DIR = Path(__file__).parent.parent / "data" / "competitions"
+PROJECT_DATA_DIR = Path(__file__).parent.parent / "data"
+DATA_DIR = Path(os.getenv("APP_DATA_DIR", str(PROJECT_DATA_DIR))) / "competitions"
 MATCH_COLUMNS = [
     "fixture_id", "season", "date", "stage", "group", "matchday",
     "home_team", "away_team", "home_goals", "away_goals", "status",
@@ -196,7 +198,9 @@ def save_matches(code: str, matches: pd.DataFrame) -> Path:
 def save_scorers(code: str, scorers: pd.DataFrame, season: str | None = None) -> Path:
     path = scorers_path(code, season)
     path.parent.mkdir(parents=True, exist_ok=True)
-    scorers.reindex(columns=SCORER_COLUMNS).to_csv(path, index=False)
+    temporary = path.with_suffix(".csv.tmp")
+    scorers.reindex(columns=SCORER_COLUMNS).to_csv(temporary, index=False)
+    temporary.replace(path)
     return path
 
 

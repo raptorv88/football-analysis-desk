@@ -42,6 +42,78 @@ function teamBadge(team, size = "sm") {
     : `<span class="team-logo fallback ${size}">${fallback}</span>`;
 }
 
+// Player photo map: name (lowercase) → photo URL (populated at boot from /api/player-photos)
+let playerPhotoMap = {};
+
+// Player face avatar — real photo if available, circular initials fallback
+const _PLAYER_FACE_PALETTE = [
+  "#1a3c5e","#2d5a8b","#8b1a3c","#3c1a5e","#1a5e3c",
+  "#5e3c1a","#1a5e5e","#5e1a5e","#3c5e1a","#5e1a1a",
+];
+function _playerColour(name) {
+  let h = 0;
+  for (let i = 0; i < name.length; i++) h = (h * 31 + name.charCodeAt(i)) & 0xffff;
+  return _PLAYER_FACE_PALETTE[h % _PLAYER_FACE_PALETTE.length];
+}
+
+function playerFace(name, size = "md") {
+  const parts = (name || "?").trim().split(/\s+/);
+  const initials = parts.length >= 2
+    ? (parts[0][0] + parts[parts.length - 1][0]).toUpperCase()
+    : parts[0].slice(0, 2).toUpperCase();
+
+  function norm(s) {
+    return s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
+  }
+
+  const trimmed = (name || "").trim();
+  const normed = norm(trimmed);
+  const tokens = normed.split(/[\s\-]+/);
+  const firstToken = tokens[0];
+  const lastToken = tokens[tokens.length - 1];
+
+  // STRICT matching to avoid cross-player mismatches:
+  // 1. Full normalized name
+  // 2. Raw name
+  // 3. First + last token (e.g. Gabriel Magalhaes)
+  // 4. Single-token mononym (e.g. Raphinha, Marquinhos, Bartra)
+  let photoUrl =
+    playerPhotoMap[normed] ||
+    playerPhotoMap[trimmed.toLowerCase()] ||
+    playerPhotoMap[trimmed] ||
+    playerPhotoMap[`${firstToken} ${lastToken}`];
+
+  if (!photoUrl && tokens.length === 1) {
+    photoUrl = playerPhotoMap[firstToken];
+  }
+
+  if (photoUrl) {
+    return `<span class="player-face ${size}" data-player="${trimmed}" aria-label="${name}"><img src="${photoUrl}" alt="${name}" loading="lazy" onerror="this.parentElement.innerHTML='${initials}';this.parentElement.classList.add('fallback')"></span>`;
+  }
+
+  // Not yet cached: trigger on-demand fetch to backend
+  if (trimmed && trimmed.length > 2) {
+    setTimeout(() => {
+      fetch(`/api/player-photo?name=${encodeURIComponent(trimmed)}`)
+        .then((r) => r.json())
+        .then((data) => {
+          if (data && data.url) {
+            playerPhotoMap[normed] = data.url;
+            playerPhotoMap[trimmed] = data.url;
+            document.querySelectorAll(`[data-player="${CSS.escape(trimmed)}"]`).forEach((el) => {
+              el.innerHTML = `<img src="${data.url}" alt="${name}" loading="lazy" onerror="this.remove()">`;
+              el.classList.remove("fallback");
+            });
+          }
+        })
+        .catch(() => {});
+    }, 10);
+  }
+
+  return `<span class="player-face ${size} fallback" data-player="${trimmed}" aria-label="${name}">${initials}</span>`;
+}
+
+
 // --- League table tab ---
 async function initTableTab() {
   const seasons = await getJSON("/api/seasons");
@@ -101,6 +173,9 @@ function liveFixture(fixture, compactPrediction = false) {
 async function initHomeTab() {
   const competitions = await getJSON("/api/competitions");
   document.getElementById("home-season").textContent = competitions.length;
+  getJSON("/api/system/status").then(renderRefreshStatus).catch(() => {
+    document.getElementById("home-refresh-status").textContent = "Refresh status unavailable";
+  });
   loadLiveFixtures();
   loadRecentResults();
   window.setInterval(loadLiveFixtures, 60_000);
@@ -125,6 +200,23 @@ async function initHomeTab() {
   } catch (error) {
     document.getElementById("news-output").innerHTML = "<p class=\"muted\">News feeds are temporarily unavailable.</p>";
   }
+}
+
+function renderRefreshStatus(status) {
+  const label = document.getElementById("home-refresh-status");
+  if (!status.enabled) {
+    label.textContent = "Automatic refresh off";
+    return;
+  }
+  const jobs = Object.values(status.jobs);
+  if (jobs.some((job) => job.state === "error" || job.state.startsWith("blocked"))) {
+    label.textContent = "A data refresh needs attention";
+    return;
+  }
+  const latest = jobs.map((job) => job.last_success).filter(Boolean).sort().at(-1);
+  label.textContent = latest
+    ? `Data refreshed ${new Date(latest).toLocaleString()}`
+    : "Automatic refresh scheduled";
 }
 
 async function loadLiveFixtures() {
@@ -343,12 +435,18 @@ async function loadTeamScorers(team, season) {
     const result = await getJSON(`/api/teams/${encodeURIComponent(team)}/scorers${query}`);
     container.innerHTML = result.players.length
       ? result.players.map((player, index) => `
-          <div class="team-player-row">
-            <span class="player-rank">${String(index + 1).padStart(2, "0")}</span>
-            <strong>${player.player}</strong>
-            <span>${player.played_matches} apps</span>
-            <b>${player.goals} <small>G</small></b>
-            <span>${player.assists || 0} A</span>
+          <div class="player-card-row">
+            <span class="player-card-rank">${index + 1}</span>
+            ${playerFace(player.player)}
+            <div class="player-card-info">
+              <strong>${player.player}</strong>
+              <span class="player-card-club">${teamBadge(team, "xs")} ${team}</span>
+            </div>
+            <div class="player-card-stats">
+              <span class="player-card-goals">${player.goals}<small>G</small></span>
+              <span class="player-card-assists">${player.assists || 0}<small>A</small></span>
+              <span class="player-card-apps">${player.played_matches}<small>apps</small></span>
+            </div>
           </div>`).join("")
       : '<p class="muted">No PL scorer summary for this team and season. Refresh with scripts.update_competitions --pl-scorers-only.</p>';
   } catch (error) {
@@ -505,7 +603,20 @@ function renderCompetitionScorers(rows) {
   const filtered = filter.value ? rows.filter((row) => row.team === filter.value) : rows;
   const container = document.getElementById("competition-scorers");
   container.innerHTML = filtered.length
-    ? filtered.slice(0, 12).map((row) => `<div class="scorer-row"><div><strong>${row.player}</strong><span class="scorer-team-name">${teamBadge(row.team)}${row.team}</span></div><strong class="scorer-goals">${row.goals}<small> G</small></strong><span>${row.assists} A · ${row.played_matches} apps</span></div>`).join("")
+    ? filtered.slice(0, 15).map((row, index) => `
+        <div class="player-card-row">
+          <span class="player-card-rank">${index + 1}</span>
+          ${playerFace(row.player)}
+          <div class="player-card-info">
+            <strong>${row.player}</strong>
+            <span class="player-card-club">${teamBadge(row.team, "xs")} ${row.team}</span>
+          </div>
+          <div class="player-card-stats">
+            <span class="player-card-goals">${row.goals}<small>G</small></span>
+            <span class="player-card-assists">${row.assists || 0}<small>A</small></span>
+            <span class="player-card-apps">${row.played_matches}<small>apps</small></span>
+          </div>
+        </div>`).join("")
     : '<p class="muted">No scorer summaries available for this season.</p>';
 }
 
@@ -525,7 +636,11 @@ function renderCompetitionPredictions(predictions) {
 (async function init() {
   initMatchTicker();
   const teams = await getJSON("/api/teams");
-  teamAssets = await getJSON("/api/team-assets").catch(() => ({}));
+  // Load team badges and player photos in parallel — both are optional enrichments
+  [teamAssets, playerPhotoMap] = await Promise.all([
+    getJSON("/api/team-assets").catch(() => ({})),
+    getJSON("/api/player-photos").catch(() => ({})),
+  ]);
   loadSideRails();
   initHomeTab().catch(() => {
     document.getElementById("home-upcoming").innerHTML = "<p class=\"muted\">Dashboard data is temporarily unavailable.</p>";

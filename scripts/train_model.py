@@ -7,11 +7,9 @@ uses at serving time, so there's no train/serve mismatch.
 import json
 from datetime import datetime, timezone
 from pathlib import Path
-
 import joblib
 import numpy as np
 import pandas as pd
-
 from sklearn.preprocessing import LabelEncoder
 from sklearn.linear_model import LogisticRegression
 from sklearn.utils.class_weight import compute_sample_weight
@@ -24,7 +22,7 @@ from app.features import build_pre_match_features, FEATURE_COLUMNS
 from app.metadata import write_json
 
 MODELS_DIR = Path(__file__).parent.parent / "models"
-MODELS_DIR.mkdir(exist_ok=True)
+MODELS_DIR.mkdir(parents=True, exist_ok=True)
 BLEND_WEIGHT = 0.25
 
 

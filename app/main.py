@@ -1,6 +1,7 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
+from contextlib import asynccontextmanager
 from pathlib import Path
 import json
 import html
@@ -15,8 +16,20 @@ from app import predict
 from app import competition_data
 from app.competition_predict import model_available, predict_fixture as predict_competition_fixture
 from app.prediction_history import prediction_for
+from app.refresh_service import refresh_status, start_refresh_tasks, stop_refresh_tasks
 
-app = FastAPI(title="PL Match Predictor API")
+
+@asynccontextmanager
+async def lifespan(application):
+    tasks = start_refresh_tasks()
+    application.state.refresh_tasks = tasks
+    try:
+        yield
+    finally:
+        await stop_refresh_tasks(tasks)
+
+
+app = FastAPI(title="Football Analysis Desk API", lifespan=lifespan)
 
 NEWS_FEEDS = [
     ("BBC Sport", "https://feeds.bbci.co.uk/sport/football/premier-league/rss.xml"),
@@ -34,6 +47,7 @@ TEAM_LOGOS = {
     "West Ham United FC": "371", "Wolverhampton Wanderers FC": "380",
 }
 _news_cache = {"expires": 0.0, "items": []}
+_player_photos_cache: dict = {"expires": 0.0, "data": {}}
 FEATURED_CHAMPIONS_LEAGUE_CLUBS = {
     "arsenal fc", "bayer 04 leverkusen", "borussia dortmund", "chelsea fc",
     "club atlético de madrid", "fc barcelona", "fc bayern münchen",
@@ -71,12 +85,108 @@ app.add_middleware(
 
 @app.get("/health")
 def health():
-    return {"status": "ok", "matches_loaded": len(data.MATCHES)}
+    refresh = refresh_status()
+    return {
+        "status": "ok",
+        "matches_loaded": len(data.MATCHES),
+        "data_refresh_enabled": refresh["enabled"],
+        "data_refresh": refresh["jobs"],
+    }
+
+
+@app.get("/api/system/status")
+def system_status():
+    return refresh_status()
 
 
 @app.get("/api/seasons")
 def seasons():
     return data.list_seasons()
+
+
+import unicodedata as _uc
+
+PLAYER_PHOTOS_FILE = Path(__file__).parent.parent / "data" / "player_photos_cache.json"
+
+
+def _norm(s: str) -> str:
+    """Lowercase, strip accents/diacritics, collapse whitespace."""
+    if not s:
+        return ""
+    nfkd = _uc.normalize("NFKD", s)
+    plain = "".join(c for c in nfkd if not _uc.combining(c))
+    return plain.lower().strip()
+
+
+def load_cached_player_photos() -> dict[str, str]:
+    if PLAYER_PHOTOS_FILE.exists():
+        try:
+            with open(PLAYER_PHOTOS_FILE, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except Exception:
+            return {}
+    return {}
+
+
+_player_photos_memory: dict[str, str] = load_cached_player_photos()
+
+
+def resolve_player_photo(name: str) -> str | None:
+    global _player_photos_memory
+    key = _norm(name)
+    if not key:
+        return None
+    if key in _player_photos_memory:
+        return _player_photos_memory[key]
+
+    # Dynamic query to FotMob suggest API
+    try:
+        search_query = "".join(c for c in _uc.normalize("NFKD", name) if not _uc.combining(c)).strip()
+        resp = requests.get(
+            f"https://apigw.fotmob.com/searchapi/suggest?term={search_query}",
+            headers={"User-Agent": "Mozilla/5.0"},
+            timeout=4,
+        )
+        if resp.status_code == 200:
+            data = resp.json()
+            squad = data.get("squadMemberSuggest") or []
+            if squad and squad[0].get("options"):
+                for opt in squad[0]["options"][:3]:
+                    payload = opt.get("payload") or {}
+                    pid = payload.get("id")
+                    if pid:
+                        url = f"https://images.fotmob.com/image_resources/playerimages/{pid}.png"
+                        _player_photos_memory[key] = url
+                        _player_photos_memory[name.lower().strip()] = url
+                        _player_photos_memory[name.strip()] = url
+                        try:
+                            with open(PLAYER_PHOTOS_FILE, "w", encoding="utf-8") as f:
+                                json.dump(_player_photos_memory, f, indent=2, ensure_ascii=False)
+                        except Exception:
+                            pass
+                        return url
+    except Exception:
+        pass
+    return None
+
+
+@app.get("/api/player-photos")
+def player_photos():
+    """
+    Returns player name -> photo URL mapping covering all competitions
+    (Champions League, Bundesliga, Premier League, La Liga, Serie A, Ligue 1)
+    using authentic, transparent, up-to-date player image cutouts.
+    """
+    global _player_photos_memory
+    if not _player_photos_memory:
+        _player_photos_memory = load_cached_player_photos()
+    return _player_photos_memory
+
+
+@app.get("/api/player-photo")
+def player_photo(name: str):
+    url = resolve_player_photo(name)
+    return {"name": name, "url": url}
 
 
 def _competition_or_404(code: str) -> str:
@@ -247,7 +357,7 @@ def model_info():
         return json.loads(path.read_text()) if path.exists() else None
 
     return {
-        "data": load_json(root / "data" / "data_metadata.json"),
+        "data": load_json(data.DATA_DIR / "data_metadata.json"),
         "model": load_json(root / "models" / "model_metadata.json"),
         "selection": load_json(root / "models" / "model_selection.json"),
     }
@@ -482,5 +592,12 @@ from fastapi.responses import FileResponse
 def serve_root():
     return FileResponse(FRONTEND_DIR / "index.html")
 
+
+@app.get("/favicon.ico")
+def serve_favicon():
+    return FileResponse(FRONTEND_DIR / "favicon.ico")
+
+
 app.mount("/", StaticFiles(directory=FRONTEND_DIR, html=True), name="frontend")
+
 

@@ -4,7 +4,7 @@ from pathlib import Path
 import os
 from dotenv import load_dotenv
 
-from app.data import load_matches
+from app.data import DATA_DIR, load_matches
 from app.metadata import build_data_metadata, write_json
 from app.prediction_history import snapshot_predictions
 
@@ -58,9 +58,11 @@ for match in data["matches"]:
 
 df = pd.DataFrame(rows)
 
-output_path = Path("data") / "premier_league_matches.csv"
-df.to_csv(output_path, index=False)
-write_json(Path("data") / "data_metadata.json", build_data_metadata(load_matches()))
+output_path = DATA_DIR / "premier_league_matches.csv"
+temporary_path = output_path.with_suffix(output_path.suffix + ".tmp")
+df.to_csv(temporary_path, index=False)
+temporary_path.replace(output_path)
+write_json(DATA_DIR / "data_metadata.json", build_data_metadata(load_matches()))
 
 print(f"Updated file: {output_path}")
 print(f"Total matches downloaded: {len(df)}")

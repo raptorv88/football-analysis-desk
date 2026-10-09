@@ -20,7 +20,7 @@ from app.data import load_matches
 from app.features import fixture_features, FEATURE_COLUMNS
 
 MODELS_DIR = Path(__file__).parent.parent / "models"
-MODELS_DIR.mkdir(exist_ok=True)
+MODELS_DIR.mkdir(parents=True, exist_ok=True)
 
 
 def build_training_table(matches: pd.DataFrame) -> tuple[pd.DataFrame, pd.Series]:

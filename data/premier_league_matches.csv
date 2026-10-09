@@ -89,36 +89,36 @@ date,matchday,home_team,away_team,home_goals,away_goals,status
 2026-10-31T20:00:00Z,9,Aston Villa FC,Fulham FC,,,TIMED
 2026-11-01T16:30:00Z,9,Liverpool FC,Arsenal FC,,,TIMED
 2026-11-02T20:00:00Z,9,Newcastle United FC,Everton FC,,,TIMED
+2026-11-06T20:00:00Z,10,Everton FC,Coventry City FC,,,TIMED
+2026-11-07T12:30:00Z,10,Leeds United FC,Tottenham Hotspur FC,,,TIMED
 2026-11-07T15:00:00Z,10,Arsenal FC,Hull City AFC,,,TIMED
-2026-11-07T15:00:00Z,10,Nottingham Forest FC,Manchester City FC,,,TIMED
-2026-11-07T15:00:00Z,10,Leeds United FC,Tottenham Hotspur FC,,,TIMED
 2026-11-07T15:00:00Z,10,Fulham FC,Newcastle United FC,,,TIMED
-2026-11-07T15:00:00Z,10,Everton FC,Coventry City FC,,,TIMED
-2026-11-07T15:00:00Z,10,Crystal Palace FC,Liverpool FC,,,TIMED
-2026-11-07T15:00:00Z,10,Sunderland AFC,Chelsea FC,,,TIMED
-2026-11-07T15:00:00Z,10,Ipswich Town FC,AFC Bournemouth,,,TIMED
-2026-11-07T15:00:00Z,10,Brighton & Hove Albion FC,Brentford FC,,,TIMED
-2026-11-07T15:00:00Z,10,Manchester United FC,Aston Villa FC,,,TIMED
+2026-11-07T17:30:00Z,10,Nottingham Forest FC,Manchester City FC,,,TIMED
+2026-11-08T14:00:00Z,10,Crystal Palace FC,Liverpool FC,,,TIMED
+2026-11-08T14:00:00Z,10,Sunderland AFC,Chelsea FC,,,TIMED
+2026-11-08T14:00:00Z,10,Ipswich Town FC,AFC Bournemouth,,,TIMED
+2026-11-08T14:00:00Z,10,Brighton & Hove Albion FC,Brentford FC,,,TIMED
+2026-11-08T16:30:00Z,10,Manchester United FC,Aston Villa FC,,,TIMED
+2026-11-21T12:30:00Z,11,Manchester City FC,Fulham FC,,,TIMED
 2026-11-21T15:00:00Z,11,Chelsea FC,Leeds United FC,,,TIMED
-2026-11-21T15:00:00Z,11,Manchester City FC,Fulham FC,,,TIMED
 2026-11-21T15:00:00Z,11,Aston Villa FC,Sunderland AFC,,,TIMED
-2026-11-21T15:00:00Z,11,Liverpool FC,Manchester United FC,,,TIMED
-2026-11-21T15:00:00Z,11,Hull City AFC,Brighton & Hove Albion FC,,,TIMED
 2026-11-21T15:00:00Z,11,AFC Bournemouth,Nottingham Forest FC,,,TIMED
 2026-11-21T15:00:00Z,11,Tottenham Hotspur FC,Ipswich Town FC,,,TIMED
-2026-11-21T15:00:00Z,11,Brentford FC,Everton FC,,,TIMED
 2026-11-21T15:00:00Z,11,Coventry City FC,Crystal Palace FC,,,TIMED
-2026-11-21T15:00:00Z,11,Newcastle United FC,Arsenal FC,,,TIMED
+2026-11-21T17:30:00Z,11,Newcastle United FC,Arsenal FC,,,TIMED
+2026-11-22T14:00:00Z,11,Hull City AFC,Brighton & Hove Albion FC,,,TIMED
+2026-11-22T16:30:00Z,11,Liverpool FC,Manchester United FC,,,TIMED
+2026-11-23T20:00:00Z,11,Brentford FC,Everton FC,,,TIMED
+2026-11-27T20:00:00Z,12,Nottingham Forest FC,Chelsea FC,,,TIMED
 2026-11-28T15:00:00Z,12,Leeds United FC,Coventry City FC,,,TIMED
-2026-11-28T15:00:00Z,12,Ipswich Town FC,Aston Villa FC,,,TIMED
-2026-11-28T15:00:00Z,12,Arsenal FC,Manchester City FC,,,TIMED
 2026-11-28T15:00:00Z,12,Manchester United FC,Brentford FC,,,TIMED
-2026-11-28T15:00:00Z,12,Everton FC,Liverpool FC,,,TIMED
-2026-11-28T15:00:00Z,12,Fulham FC,AFC Bournemouth,,,TIMED
-2026-11-28T15:00:00Z,12,Nottingham Forest FC,Chelsea FC,,,TIMED
-2026-11-28T15:00:00Z,12,Brighton & Hove Albion FC,Newcastle United FC,,,TIMED
-2026-11-28T15:00:00Z,12,Sunderland AFC,Tottenham Hotspur FC,,,TIMED
-2026-11-28T15:00:00Z,12,Crystal Palace FC,Hull City AFC,,,TIMED
+2026-11-28T17:30:00Z,12,Ipswich Town FC,Aston Villa FC,,,TIMED
+2026-11-29T12:00:00Z,12,Everton FC,Liverpool FC,,,TIMED
+2026-11-29T14:05:00Z,12,Fulham FC,AFC Bournemouth,,,TIMED
+2026-11-29T14:05:00Z,12,Brighton & Hove Albion FC,Newcastle United FC,,,TIMED
+2026-11-29T14:05:00Z,12,Sunderland AFC,Tottenham Hotspur FC,,,TIMED
+2026-11-29T14:05:00Z,12,Crystal Palace FC,Hull City AFC,,,TIMED
+2026-11-29T16:30:00Z,12,Arsenal FC,Manchester City FC,,,TIMED
 2026-12-02T20:00:00Z,13,Tottenham Hotspur FC,Fulham FC,,,TIMED
 2026-12-02T20:00:00Z,13,Liverpool FC,Sunderland AFC,,,TIMED
 2026-12-02T20:00:00Z,13,Hull City AFC,Nottingham Forest FC,,,TIMED

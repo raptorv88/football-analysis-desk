@@ -13,6 +13,7 @@ from app.competition_data import (
     scorers_from_provider,
     load_team_assets,
     save_team_assets,
+    save_scorers,
     team_assets_from_provider,
 )
 
@@ -90,6 +91,21 @@ class CompetitionDataTests(unittest.TestCase):
 
                 self.assertEqual(load_team_assets("CL"), {"Club One": "https://example.test/one.svg"})
                 self.assertEqual(load_team_assets("BL1"), {"Club Two": "https://example.test/two.svg"})
+
+    def test_scorer_refresh_writes_complete_separate_file(self):
+        from app.competition_data import load_scorers
+
+        with TemporaryDirectory() as temporary:
+            with patch("app.competition_data.DATA_DIR", Path(temporary)):
+                scorers = scorers_from_provider([{
+                    "player": {"id": 1, "name": "Forward One"},
+                    "team": {"id": 2, "name": "Home FC"},
+                    "goals": 3, "assists": 1, "penalties": 0, "playedMatches": 5,
+                }])
+                path = save_scorers("CL", scorers, "2026/27")
+                self.assertTrue(path.exists())
+                self.assertFalse(path.with_suffix(".csv.tmp").exists())
+                self.assertEqual(load_scorers("CL", "2026/27").iloc[0]["player"], "Forward One")
 
     def test_champions_league_table_uses_league_phase_only(self):
         matches = pd.DataFrame([

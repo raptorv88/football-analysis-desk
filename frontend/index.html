@@ -2,8 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Football Analysis Desk</title>
-<link rel="stylesheet" href="styles.css?v=20">
+<link rel="icon" type="image/svg+xml" href="favicon.svg?v=3">
+<link rel="icon" type="image/png" sizes="64x64" href="favicon.png?v=3">
+<link rel="shortcut icon" href="favicon.ico?v=3">
+<link rel="stylesheet" href="styles.css?v=26">
 </head>
 <body>
   <header>
@@ -15,7 +19,7 @@
         <button class="ticker-arrow" id="ticker-next" type="button" aria-label="Scroll to later fixtures">&#8250;</button>
       </div>
     </section>
-    <div class="brand-row"><h1><span class="brand-symbol">FA</span><span>Football <em>Analysis Desk</em></span></h1><span class="live-status"><i></i> Live data workspace</span></div>
+    <div class="brand-row"><h1><img class="brand-symbol brand-logo" src="favicon.svg?v=3" alt="Football Analytics Logo" width="42" height="42"><span>Football <em>Analysis Desk</em></span></h1><span class="live-status"><i></i> Live data workspace</span></div>
     <nav aria-label="Dashboard sections">
       <button class="tab-btn active" data-tab="home">Home</button>
       <button class="tab-btn" data-tab="table">League Table</button>
@@ -35,11 +39,9 @@
     <section id="tab-home" class="tab active">
       <div class="home-intro">
         <div>
-          <p class="eyebrow">GLOBAL FOOTBALL / MATCH INTELLIGENCE</p>
-          <h2>One desk. Every competition.</h2>
-          <p class="intro-copy">Fixtures, standings and match forecasts across six competitions.</p>
+          <p class="eyebrow">GLOBAL FOOTBALL COVERAGE</p>
         </div>
-        <div class="season-stamp"><span>Competitions</span><strong id="home-season">—</strong></div>
+        <div class="season-stamp"><span>Competitions</span><strong id="home-season">—</strong><small id="home-refresh-status">Checking data refresh...</small></div>
       </div>
       <div class="home-grid">
         <section class="home-block live-block">
@@ -174,6 +176,6 @@
     <p>Probabilities are estimates, not certainties.</p>
   </footer>
 
-  <script src="app.js?v=24"></script>
+  <script src="app.js?v=29"></script>
 </body>
 </html>

@@ -437,7 +437,20 @@ header {
 .brand-row h1 { display: flex; align-items: center; gap: 0.7rem; color: #fff; font: 1.2rem "Bahnschrift Condensed", "Arial Narrow", Impact, sans-serif; }
 .brand-row h1 > span:last-child { display: flex; flex-wrap: wrap; gap: 0.3rem; align-items: baseline; }
 .brand-row h1 em { color: #d8bfdc; font-style: normal; font-weight: 400; }
-.brand-symbol { display: grid; place-items: center; width: 40px; height: 36px; background: var(--pink); color: #fff; font: 800 0.8rem "Trebuchet MS", sans-serif; }
+.brand-symbol {
+  display: block;
+  width: 42px;
+  height: 42px;
+  border-radius: 11px;
+  box-shadow: 0 4px 14px rgba(229, 46, 159, 0.28), 0 2px 6px rgba(0, 0, 0, 0.5);
+  flex-shrink: 0;
+  object-fit: contain;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.brand-symbol:hover {
+  transform: translateY(-1px) scale(1.05);
+  box-shadow: 0 6px 18px rgba(229, 46, 159, 0.42), 0 3px 8px rgba(0, 0, 0, 0.6);
+}
 .live-status { color: #d7cddd; font-family: "Trebuchet MS", sans-serif; }
 .live-status i { background: #42d39a; }
 
@@ -493,6 +506,7 @@ header nav .tab-btn.active { border-bottom-color: var(--pink); background: trans
 .season-stamp { position: absolute; right: 0; bottom: 2rem; align-self: auto; min-width: 118px; border-color: var(--pink); text-align: left; }
 .season-stamp span { color: var(--muted-ink); }
 .season-stamp strong { color: var(--ink); font-family: "Bahnschrift Condensed", "Arial Narrow", Impact, sans-serif; }
+.season-stamp small { display: block; max-width: 170px; margin-top: 0.3rem; color: var(--muted-ink); font: 0.67rem/1.35 "Trebuchet MS", sans-serif; }
 
 .home-grid { grid-template-columns: minmax(220px, 0.9fr) minmax(360px, 1.55fr) minmax(220px, 0.9fr); gap: 1.6rem; margin-top: 0; }
 .home-block { padding: 1rem 0; border: 0; border-top: 1px solid var(--line); border-radius: 0; background: transparent; }
@@ -559,13 +573,15 @@ footer { color: var(--muted-ink); }
 }
 
 @media (max-width: 620px) {
+  html { font-size: 20px; }
+  body { line-height: 1.5; }
   .match-ticker-inner { min-height: 98px; padding: 0 0.35rem; }
   .ticker-label { display: none; }
   .ticker-arrow { flex-basis: 32px; width: 32px; height: 32px; margin: 0 0.25rem; }
   .ticker-card { flex-basis: 230px; padding: 0.55rem 0.7rem; }
   .brand-row { align-items: flex-start; gap: 0.5rem; padding: 0.75rem 0.9rem; }
   .brand-row h1 { font-size: 1.05rem; }
-  .brand-symbol { flex: 0 0 36px; width: 36px; height: 34px; }
+  .brand-symbol { flex: 0 0 36px; width: 36px; height: 36px; }
   .live-status { align-self: center; font-size: 0.68rem; }
   header nav { padding: 0 0.45rem; }
   header nav .tab-btn { padding: 0.75rem 0.72rem 0.65rem; font-size: 0.74rem; }
@@ -667,10 +683,99 @@ footer { color: var(--muted-ink); }
 .team-player-row b small { font: 0.62rem "Trebuchet MS", sans-serif; }
 .player-rank { color: #a28aa8 !important; }
 
+/* ── Player card rows (scorer lists) ───────────────────────────────── */
+.player-card-row {
+  display: grid;
+  grid-template-columns: 22px 44px minmax(0,1fr) auto;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.62rem 0;
+  border-bottom: 1px solid var(--line);
+}
+.player-card-row:last-child { border-bottom: 0; }
+
+/* Rank number */
+.player-card-rank {
+  font: 700 0.75rem "Bahnschrift Condensed", "Arial Narrow", Impact, sans-serif;
+  color: #7a8fa6;
+  text-align: center;
+}
+
+/* Circular face avatar */
+.player-face {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font: 700 0.72rem "Trebuchet MS", sans-serif;
+  color: #fff;
+  letter-spacing: 0.03em;
+  flex-shrink: 0;
+  border: 2px solid rgba(255,255,255,0.14);
+  background: radial-gradient(circle at 50% 30%, #303b4d, #141b26);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.35);
+  overflow: hidden;
+  position: relative;
+}
+.player-face.fallback {
+  background: radial-gradient(circle at 50% 30%, #29384d, #121824);
+}
+.player-face img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 50%;
+  display: block;
+}
+.player-face.md { width: 42px; height: 42px; font-size: 0.78rem; }
+.player-face.sm { width: 32px; height: 32px; font-size: 0.62rem; }
+.player-face.lg { width: 52px; height: 52px; font-size: 1rem; }
+
+
+/* Info block (name + club) */
+.player-card-info { display: flex; flex-direction: column; gap: 0.18rem; min-width: 0; }
+.player-card-info strong { font-size: 0.85rem; color: var(--ink); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.player-card-club { display: inline-flex; align-items: center; gap: 0.22rem; font-size: 0.68rem; color: var(--muted-ink); }
+.player-card-club .team-logo { width: 14px; height: 14px; }
+
+/* xs team logo size */
+.team-logo.xs { width: 14px; height: 14px; }
+.team-logo.fallback.xs { font-size: 0.42rem; }
+
+/* Stats cluster */
+.player-card-stats { display: flex; gap: 0.6rem; align-items: center; flex-shrink: 0; }
+.player-card-goals {
+  color: var(--pink);
+  font: 700 1.1rem "Bahnschrift Condensed", "Arial Narrow", Impact, sans-serif;
+  min-width: 28px;
+  text-align: right;
+}
+.player-card-goals small { font: 0.54rem "Trebuchet MS", sans-serif; }
+.player-card-assists {
+  color: #7ab3d8;
+  font: 700 0.88rem "Bahnschrift Condensed", "Arial Narrow", Impact, sans-serif;
+  min-width: 22px;
+  text-align: right;
+}
+.player-card-assists small { font: 0.52rem "Trebuchet MS", sans-serif; }
+.player-card-apps {
+  color: var(--muted-ink);
+  font: 0.68rem "Trebuchet MS", sans-serif;
+  min-width: 32px;
+  text-align: right;
+}
+.player-card-apps small { font-size: 0.58rem; }
+
 @media (max-width: 620px) {
   .home-fixture .home-fixture-match { gap: 0.25rem; }
   .home-fixture .home-fixture-match .team-logo { width: 18px; height: 18px; }
   .team-player-row { grid-template-columns: 22px minmax(0, 1fr) 55px 35px 35px; gap: 0.35rem; }
   .team-player-row strong { font-size: 0.76rem; }
   .team-player-row span { font-size: 0.64rem; }
+  .player-card-row { grid-template-columns: 18px 36px minmax(0,1fr) auto; gap: 0.4rem; }
+  .player-face.md { width: 34px; height: 34px; font-size: 0.68rem; }
+  .player-card-goals { font-size: 0.92rem; }
+  .player-card-assists { display: none; }
+  .player-card-apps { display: none; }
 }

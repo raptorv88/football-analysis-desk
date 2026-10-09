@@ -5,10 +5,12 @@ from __future__ import annotations
 import json
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
+import os
 
 import pandas as pd
 
-HISTORY_PATH = Path(__file__).parent.parent / "data" / "prediction_history.json"
+PROJECT_DATA_DIR = Path(__file__).parent.parent / "data"
+HISTORY_PATH = Path(os.getenv("APP_DATA_DIR", str(PROJECT_DATA_DIR))) / "prediction_history.json"
 
 
 def fixture_key(date, home_team: str, away_team: str) -> str:

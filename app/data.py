@@ -5,10 +5,12 @@ league tables and team stats on demand.
 
 import pandas as pd
 from pathlib import Path
+import os
 
 from app.features import fixture_features
 
-DATA_DIR = Path(__file__).parent.parent / "data"
+PROJECT_DATA_DIR = Path(__file__).parent.parent / "data"
+DATA_DIR = Path(os.getenv("APP_DATA_DIR", str(PROJECT_DATA_DIR)))
 XG_PATH = DATA_DIR / "premier_league_xg.csv"
 
 REQUIRED_MATCH_COLUMNS = {

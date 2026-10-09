@@ -136,6 +136,40 @@ from model features to avoid future-information leakage. Player-informed
 training needs a source with historical match-level player statistics and
 lineup/availability snapshots.
 
+### Deploy a self-updating service on Render
+
+The repository includes a `render.yaml` Blueprint for a single-instance web
+service with a persistent disk. The build installs dependencies and trains the
+PL and competition models. At startup, `app.bootstrap` seeds only missing data
+files onto the disk, then starts Uvicorn with one worker. This is intentional:
+the scheduled refresh jobs run inside the web process and must not be duplicated
+across multiple workers.
+
+`APP_DATA_DIR` selects the persistent data directory. The Blueprint sets it to
+`/var/data`; local development defaults to the repository's `data/` directory.
+The bootstrap copies baseline CSV and metadata files only when they are missing,
+never overwriting data already refreshed on the disk. Prediction history is
+created there at runtime and is not seeded from the repository.
+
+1. In Render, create a **Blueprint** from this GitHub repository.
+2. Set `FOOTBALL_DATA_API_KEY` in the service environment. Never put the real
+  value in this repository.
+3. Deploy and wait for the initial build/training to complete.
+4. Confirm the service health at `/health` and refresh state at
+  `/api/system/status`.
+
+When `ENABLE_DATA_REFRESH=true`, PL fixtures refresh every 2 days and the
+other competitions refresh every 6 days by default. These intervals can be
+changed with `PL_REFRESH_INTERVAL_SECONDS` and
+`COMPETITION_REFRESH_INTERVAL_SECONDS`; do not set them below the provider's
+rate limits. Local runs leave the scheduler disabled unless explicitly enabled.
+The service needs a paid Render plan for its persistent disk. Keep it at one
+instance; for horizontal scaling, move scheduled updates to a separate worker
+and shared persistent storage such as PostgreSQL. Scheduled refreshes update
+data and scorer summaries only; they do not retrain or replace model artifacts.
+Model changes remain an explicit build/retraining step and should be evaluated
+with the chronological backtest before promotion.
+
 ---
 
 ### Project structure

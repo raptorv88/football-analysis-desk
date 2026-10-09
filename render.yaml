@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: football-analysis-desk
+    runtime: python
+    plan: starter
+    region: oregon
+    buildCommand: >-
+      python -m pip install -r requirements.txt &&
+      env -u APP_DATA_DIR python -m scripts.train_model &&
+      env -u APP_DATA_DIR python -m training.train_competition_models --competition all
+    startCommand: python -m app.bootstrap
+    healthCheckPath: /health
+    disk:
+      name: football-analysis-data
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.13.0
+      - key: APP_DATA_DIR
+        value: /var/data
+      - key: ENABLE_DATA_REFRESH
+        value: "true"
+      - key: PL_REFRESH_INTERVAL_SECONDS
+        value: "172800"
+      - key: COMPETITION_REFRESH_INTERVAL_SECONDS
+        value: "518400"
+      - key: FOOTBALL_DATA_API_KEY
+        sync: false
